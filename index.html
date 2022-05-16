@@ -2,85 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Smallest Animals</title>
-    <link href="../styleFiles/styleStartseite.css" rel="stylesheet">
-
+    <title>Request</title>
 </head>
 <body>
-<header>
-    <a href="index.html" class="titelnavbar">
-        <strong>The smallest Animals</strong>
-    </a>
-    <div class="navbar">
-        <a href="Paedophryne_amauensis.html">1. Paedophryne amauensis</a>
-        <a href="Paedocypris.html">2. Paedocypris</a>
-        <a href="Tetracheilostoma_carlae.html">3. Tetracheilostoma carlae</a>
-        <a href="Schweinsnasenfledermaus.html">4. Schweinsnasenfledermaus</a>
-    </div>
-</header>
-<main>
-    <h1 class="center">Die vier kleinsten Tiere der Welt</h1>
+<form action="https://hookb.in/pzVBOjjn2ZURPnrrWaLP" method="post" autocomplete="on">
+    <label for="fnameid">First name:</label>
+    <input type="text" id="fnameid" name="fname"><br><br>
+    <label for="lnameid">Last name:</label>
+    <input type="text" id="lnameid" name="lname"><br><br>
+    <label for="ranger">Lieblingszahl:<span id="valueranger"></span></label><br>
+    <input type="range" min="0" max="100" id="ranger" name="Lieblingszahl:"><br>
+    <label>Bitte wählen Sie ihr geschlecht aus:</label><br>
+    <input type="radio" id="weiblich" name="geschlecht" value="Weiblich">
+     <label for="weiblich">Weiblich</label><br>
+     <input type="radio" id="mannlich" name="geschlecht" value="mannlich">
+     <label for="mannlich">Männlich</label><br>
+     <input type="radio" id="diverses" name="geschlecht" value="diverses">
+     <label for="diverses">Diverses</label><br>
+    <label for="favcolor">Bitte wähle deine Lieblingsfarbe aus:</label>
+    <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+    <input type="submit" value="Submit">
+</form>
+<script>
+    var slider = document.getElementById("ranger");
+    var output = document.getElementById("valueranger");
+    output.innerHTML = slider.value;
 
-    <div class="slideshow-container">
-        <!-- Bild-Slider -->
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 4</div>
-            <img src="/bilder/frosch.png" style="width:50%">
-            <div class="text">1. Paedophryne amauensis</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 4</div>
-            <img src="/bilder/wurm.png" style="width:50%">
-            <div class="text">2. Paedocypris</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 4</div>
-            <img src="/bilder/schlange.png" style="width:50%">
-            <div class="text">3. Tetracheilostoma carlae</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
-            <img src="/bilder/fledermaus.png" style="width:50%">
-            <div class="text">4. Schweinsnasenfledermaus</div>
-        </div>
-
-        <!-- Weiter und zurück button beim Slider-->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-    <!-- Kreise unterhlab des Bildes-->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-
-    </div>
-    <script rel="script" src="../scriptFiles/script.js"></script>
-    <p class="links">
-        <h4>The smallest Animals</h4>
-    Tiere kommen in allen Formen und Größen vor, von wirklich winzig bis atemberaubend groß.
-    Während Sie vielleicht denken, dass es besser ist, groß zu sein,
-    und es viele Vorteile hat, ist es auch gut, klein zu sein!
-    Sie benötigen weniger Ressourcen, um zu überleben, können sich häufiger vermehren
-    und können sich in alle möglichen Verstecke drängen, um Raubtieren zu entkommen und den Winterschlaf zu halten!
-    Hier sind die 4 kleinsten Tiere der Welt!
-    </p>
-</main>
-
-
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+</script>
 </body>
-<footer>
-    <a href="impressum.html">
-        <button>Impressum</button>
-    </a>
-    <a href="impressum.html#kommentarfeld">
-        <button>Zum Kommentarfeld</button>
-    </a>
-    <p>&copy; Loris Frei</p>
-</footer>
 </html>
