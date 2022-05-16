@@ -1,0 +1,157 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+            "header header"
+            "main aside"
+            "article article"
+            "footer footer";
+    background: #cfe0e6;
+}
+
+article{
+    height: 50px;
+    grid-area: article;
+}
+footer p{
+    float: left;
+
+}
+footer a{
+    float: right;
+    height: 50px;
+    width: 180px;
+    background-color: #60a8bf;
+
+}
+
+footer a button{
+    height: 50px;
+    width: 180px;
+    background-color:#597680;
+}
+
+footer a button:hover{
+    background-color: #d7cfe6;
+    color: black;
+
+}
+footer{
+    grid-area: footer;
+    width: 100%;
+    height: auto;
+    bottom: 1px;
+    background-color: #7dc2f7;
+}
+header{
+    position: fixed;
+    top: 1px;
+    width: 100%;
+    grid-area: header;
+    background-color: #7dc2f7;
+    border-radius: 15px;
+}
+
+.titelnavbar{
+    float: left;
+    height: 50px;
+    width: 20%;
+    line-height: 50px;
+    text-align: center;
+    background-color: #597680;
+    color: black;
+    text-decoration: none;
+    border-radius: 0px 15px 15px 0px;
+}
+
+/*Navigationsmenü*/
+.navbar {
+    grid-row: 1;
+    grid-column: span;
+    overflow: hidden;
+    background-color: #7dc2f7;
+    top: 0;
+    width: 80%;
+    height: 50px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    background-color: #7dc2f7;
+    border: black 2px ;
+    border-radius: 15px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+
+}
+
+.navbar a:hover {
+    background: #d7cfe6;
+    color: black;
+    font-weight: bold;
+    animation-name: navAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes navAnimation {
+    0%, 100%{
+        background-color: #60a8bf;
+    }
+    50%{
+        color: white;
+        background-color: darkblue;
+    }
+    80%{
+        background-color: dodgerblue;
+        color: black;
+    }
+}
+.links{
+    text-align: left;
+}
+.center{
+    text-align: center;
+}
+.rechts{
+    text-align: right;
+}
+
+aside{
+    margin-top: 70px;
+    height: fit-content;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-area: aside;
+    border-radius: 15px;
+    background-color: lightskyblue;
+}
+aside img{
+    width: 70%;
+    border-radius: 15px 0px 15px 0px;
+}
+main{
+    margin-top: 50px;
+    grid-area: main;
+    padding-left: 10px;
+    padding-right: 10px;
+}
